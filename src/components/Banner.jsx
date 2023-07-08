@@ -1,7 +1,7 @@
 import React from "react";
 // import Image from "../assets/avatar.svg";
 // import Image from "../assets/me3.png";
-import Image from "../assets/me4.png";
+import Image from "../assets/me2.png";
 import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
