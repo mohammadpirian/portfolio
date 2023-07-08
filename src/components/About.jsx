@@ -24,23 +24,30 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1"
           >
-            <h2 className="font-primary text-[26px] mb-6 tracking-[10%] uppercase lg:h2 text-accent">About me.</h2>
+            <h2 className="font-primary text-[26px] mb-6 tracking-[10%] uppercase lg:h2 text-accent">
+              About me.
+            </h2>
             <h3 className="font-primary font-semibold text-[18px] mb-6 leading-[30px] lg:h3 mb-4">
               I'm a Front-End Developer with over 2 years of design experience.
             </h3>
-            <p className="mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              assumenda expedita voluptas dolores nisi sequi fugiat repudiandae
-              numquam . exercitationem tenetur! Earum, odit.
+            <p className="mb-6 leading-tight">
+              I am an enthusiastic and skilled Frontend Developer ready to
+              embark on a journey into the world of web development. With a
+              solid understanding of web technologies, I possess a passion for
+              creating captivating user experiences. My attention to detail and
+              commitment to building visually stunning and responsive web
+              applications drive me to excel in this field.
             </p>
             <div className="flex gap-x-6 lg:gap-x-10 mb-12">
               <div>
                 <div className="text-[26px] lg:text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={13} duration={3} /> : null}
+                  {inView ? (
+                    <CountUp separator="" start={0} end={1997} duration={3} />
+                  ) : null}
                 </div>
                 <div className="font-primary text-xs lg:text-sm tracking-[2px]">
-                  Years of <br />
-                  Experience
+                  Date of <br />
+                  Birth
                 </div>
               </div>
               <div>

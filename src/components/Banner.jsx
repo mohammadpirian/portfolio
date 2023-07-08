@@ -46,11 +46,11 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
+              className="mb-8 max-w-lg mx-auto lg:mx-0 leading-tight"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint.
-              Laborum expedita architecto nulla eius tenetur maiores eaque
-              pariatur .
+              Discover my personal website and unveil the projects I've been
+              part of. Follow along to witness my journey as a front-end
+              developer and get acquainted with me here.
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.6)}
