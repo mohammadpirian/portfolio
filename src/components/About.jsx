@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import ContactModal from "./modals/ContactModal";
 
 const About = () => {
+  const [contactModal, setCotactModal] = useState(false);
   const [ref, inView] = useInView({ threshold: 0.5 });
   return (
     <section className="section lg:mt-20 " id="about" ref={ref}>
@@ -71,7 +73,7 @@ const About = () => {
               </div>
             </div>
             <div className="flex gap-x-8 items-center">
-              <button className="btn btn-sm lg:btn-lg">Contact me</button>
+              <button className="btn btn-sm lg:btn-lg" onClick={() => setCotactModal(true)}>Contact me</button>
               <a href="#" className="text-gradient btn-link">
                 My Portfolio
               </a>
@@ -79,6 +81,7 @@ const About = () => {
           </motion.div>
         </div>
       </div>
+      {contactModal && <ContactModal contactModal={contactModal} setCotactModal={setCotactModal}/>}
     </section>
   );
 };

@@ -50,6 +50,9 @@
   .h3 {
     @apply font-primary font-semibold text-[26px] mb-6 leading-[46px];
   }
+  .me-h3 {
+    @apply font-primary font-semibold text-[26px] leading-[46px];
+  }
   .btn {
     @apply rounded-full font-primary text-white font-medium;
   }

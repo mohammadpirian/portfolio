@@ -1,36 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import NextModal from "./modals/NextModal";
 
 const services = [
   {
-    name: "UI/UX Design",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint.Laborum expedita architecto nulla eius tenetur .",
+    name: "Next-JS",
+    description: "Pages Router, App Router, Layout, SSR, SSG, Middleware.",
     link: "learn more",
+    modal: "next",
   },
   {
-    name: "Development",
+    name: "React-JS",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint.Laborum expedita architecto nulla eius tenetur .",
+      "JSX, TSX, Functional Component, Server Components, Hooks, Context API, Form Validations, Container Presentational.",
+    modaldescription:
+      "JSX, TSX, Functional Component, Server Components, Hooks, Context API, Form Validations, Container Presentational, Component Architecture, Prop Types, Material-UI, Styled Component, CSS Modules, React DataTable, Redux, React Router, React Query ,React Dev Tools.",
     link: "learn more",
+    modal: "react",
   },
   {
-    name: "Digital Marketing",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint.Laborum expedita architecto nulla eius tenetur .",
+    name: "TypeScript",
+    description: "Type, Interface, Class, Generic.",
+    modaldescription: "Type, Interface, Class, Generic.",
     link: "learn more",
+    modal: "ts",
   },
   {
-    name: "Product Branding",
+    name: "JavaScript",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint.Laborum expedita architecto nulla eius tenetur .",
+      "ES6, Async Programming, OOP in JS, FP in JS, Pure JS SPA, DOM Manipulation, Functions, Events, Forms, Promises.",
+    modaldescription:
+      "ES6, Async Programming, OOP in JS, FP in JS, Pure JS SPA, DOM Manipulation, Functions, Events, Forms, Promises, async/await, jQuery, Error Handling, Date & Time.",
     link: "learn more",
+    modal: "js",
   },
+  // {
+  //   name: "HTML & CSS",
+  //   description:
+  //     "HTML5, CSS3, RWD (Responsive Web Design), SASS, Form Validation, Semantic Tags, Flexbox, Media Queries, Animations, Bootstrap, Tailwind, Headless-ui.",
+  //   link: "learn more",
+  // },
+  // {
+  //   name: "Tools",
+  //   description:
+  //     "NPM, Yarn, Node, Git, Gitflow, PostMan, Figma, Adobe XD, Adobe PhotoShop, Mongo DB.",
+  //   link: "learn more",
+  // },
 ];
 
 const Services = () => {
+  const [nextModal, setNextModal] = useState(false);
+  const [reactModal, setReactModal] = useState(false);
+  const [tsModal, setTsModal] = useState(false);
+  const [jsModal, setJsModal] = useState(false);
   return (
     <section className="section" id="services">
       <div className="container mx-auto">
@@ -42,9 +66,10 @@ const Services = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0"
           >
-            <h2 className="h2 text-accent mb-6">What I Do.</h2>
+            <h2 className="h2 text-accent mb-6">skills & abilities.</h2>
             <h3 className="h3 max-w-[455px] mb-16">
-              I'm a Front-End Developer with over 2 years of design experience.
+              Showcasing my programming skills: languages, technologies, and
+              tools.
             </h3>
             <button className="btn btn-sm">See my work</button>
           </motion.div>
@@ -56,7 +81,8 @@ const Services = () => {
             className="flex-1"
           >
             {services.map((service, index) => {
-              const { name, description, link } = service;
+              const { name, description, link, modal, modaldescription } =
+                service;
               return (
                 <div
                   className="border-b border-white/20 h-[146px] mb-[38px] flex"
@@ -74,6 +100,18 @@ const Services = () => {
                     <a
                       className="btn w-9 h-9 mb-[42px] flex justify-center items-center"
                       href="#"
+                      onClick={() => {
+                        switch (modal) {
+                          case "next":
+                            setNextModal(true);
+                          case "react":
+                            setReactModal(true);
+                          case "ts":
+                            setTsModal(true);
+                          case "js":
+                            setJsModal(true);
+                        }
+                      }}
                     >
                       <BsArrowUpRight />
                     </a>
@@ -87,6 +125,9 @@ const Services = () => {
           </motion.div>
         </div>
       </div>
+      {nextModal && (
+        <NextModal setNextModal={setNextModal} nextModal={nextModal} />
+      )}
     </section>
   );
 };

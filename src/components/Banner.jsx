@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 // import Image from "../assets/avatar.svg";
 // import Image from "../assets/me3.png";
-import Image from "../assets/me2.png";
+import Image from "../assets/me6.png";
 import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import ContactModal from "./modals/ContactModal";
 
 const Banner = () => {
+  const [contactModal, setCotactModal] = useState(false);
   return (
     <section
       className="min-h-[85vh] lg:min-h-[78vh] flex items-center"
@@ -59,7 +61,12 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg">Contact me</button>
+              <button
+                className="btn btn-lg"
+                onClick={() => setCotactModal(true)}
+              >
+                Contact me
+              </button>
               <a href="#" className="text-gradient btn-link">
                 My Portfolio
               </a>
@@ -95,6 +102,7 @@ const Banner = () => {
           </motion.div>
         </div>
       </div>
+      {contactModal && <ContactModal contactModal={contactModal} setCotactModal={setCotactModal}/>}
     </section>
   );
 };
