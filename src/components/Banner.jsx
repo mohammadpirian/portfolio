@@ -1,5 +1,7 @@
 import React from "react";
-import Image from "../assets/avatar.svg";
+// import Image from "../assets/avatar.svg";
+// import Image from "../assets/me3.png";
+import Image from "../assets/me4.png";
 import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
@@ -32,7 +34,7 @@ const Banner = () => {
             >
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
-                sequence={["Developer", 2000, "Designer", 2000]}
+                sequence={["Front-End Developer", 2000, "Designer", 2000]}
                 speed={50}
                 className="text-accent"
                 wrapper="span"
@@ -86,7 +88,10 @@ const Banner = () => {
             whileInView={"show"}
             className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] "
           >
-            <img src={Image} />
+            <img
+              className="w-full max-w-[320px] lg:max-w-[482px]"
+              src={Image}
+            />
           </motion.div>
         </div>
       </div>
