@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { fadeIn } from "./../variants";
-import Img1 from "../assets/portfolio-img1.png";
-import Img2 from "../assets/portfolio-img2.png";
-import Img3 from "../assets/portfolio-img3.png";
+import Img1 from "../assets/portfolio-img4.png";
+import Img2 from "../assets/portfolio-img5.png";
+import Img3 from "../assets/portfolio-img6.png";
 
 const Work = () => {
   return (
@@ -37,7 +37,7 @@ const Work = () => {
                 alt=""
               />
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-20">
-                <span className=" text-gradient">UI/UX Design</span>
+                <span className=" text-gradient">Zak Store</span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-20">
                 <span className="text-3xl text-white">Project Title</span>
@@ -59,7 +59,7 @@ const Work = () => {
                 alt=""
               />
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-20">
-                <span className=" text-gradient">UI/UX Design</span>
+                <span className=" text-gradient">Shoea Shop</span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-20">
                 <span className="text-3xl text-white">Project Title</span>
@@ -73,7 +73,7 @@ const Work = () => {
                 alt=""
               />
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-20">
-                <span className=" text-gradient">UI/UX Design</span>
+                <span className=" text-gradient">Ari Movie</span>
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-20">
                 <span className="text-3xl text-white">Project Title</span>
