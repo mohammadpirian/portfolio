@@ -5,6 +5,7 @@ import Img1 from "../assets/portfolio-img4.png";
 import Img2 from "../assets/portfolio-img5.png";
 import Img3 from "../assets/portfolio-img6.png";
 import { FaGithub } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
 
 const Work = () => {
   return (
@@ -42,9 +43,14 @@ const Work = () => {
               </div>
               <div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-20">
                 <span className="text-3xl text-white">Project Title</span>
-                <a href="https://github.com/mohammadpiriyan/ZakStore">
-                  <FaGithub />
-                </a>
+                <div className="flex gap-2">
+                  <a href="https://github.com/mohammadpiriyan/ZakStore">
+                    <FaGithub />
+                  </a>
+                  <a href="https://zakstore.vercel.app/">
+                    <TbWorldWww />
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
