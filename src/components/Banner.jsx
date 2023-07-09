@@ -2,7 +2,9 @@ import React, { useState } from "react";
 // import Image from "../assets/avatar.svg";
 // import Image from "../assets/me3.png";
 import Image from "../assets/me6.png";
-import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { SiLinkedin } from "react-icons/si";
+import { AiFillInstagram } from "react-icons/ai";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
@@ -78,14 +80,14 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
-              <a href="#">
-                <FaYoutube />
+              <a href="https://www.linkedin.com/in/mohammad-piriyan-10607917b/">
+                <SiLinkedin />
               </a>
-              <a href="#">
+              <a href="https://github.com/mohammadpiriyan">
                 <FaGithub />
               </a>
-              <a href="#">
-                <FaDribbble />
+              <a href="https://www.instagram.com/mohammadpirian/">
+                <AiFillInstagram />
               </a>
             </motion.div>
           </div>
@@ -102,7 +104,12 @@ const Banner = () => {
           </motion.div>
         </div>
       </div>
-      {contactModal && <ContactModal contactModal={contactModal} setCotactModal={setCotactModal}/>}
+      {contactModal && (
+        <ContactModal
+          contactModal={contactModal}
+          setCotactModal={setCotactModal}
+        />
+      )}
     </section>
   );
 };
