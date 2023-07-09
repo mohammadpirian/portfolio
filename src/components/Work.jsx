@@ -4,6 +4,7 @@ import { fadeIn } from "./../variants";
 import Img1 from "../assets/portfolio-img4.png";
 import Img2 from "../assets/portfolio-img5.png";
 import Img3 from "../assets/portfolio-img6.png";
+import { FaGithub } from "react-icons/fa";
 
 const Work = () => {
   return (
@@ -39,8 +40,11 @@ const Work = () => {
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-20">
                 <span className=" text-gradient">Zak Store</span>
               </div>
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-20">
+              <div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-20">
                 <span className="text-3xl text-white">Project Title</span>
+                <a href="https://github.com/mohammadpiriyan/ZakStore">
+                  <FaGithub />
+                </a>
               </div>
             </div>
           </motion.div>
@@ -61,8 +65,11 @@ const Work = () => {
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-20">
                 <span className=" text-gradient">Shoea Shop</span>
               </div>
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-20">
+              <div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-20">
                 <span className="text-3xl text-white">Project Title</span>
+                <a href="https://github.com/mohammadpiriyan/Shoea-app">
+                  <FaGithub />
+                </a>
               </div>
             </div>
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
@@ -75,8 +82,11 @@ const Work = () => {
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-20">
                 <span className=" text-gradient">Ari Movie</span>
               </div>
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-20">
+              <div className="absolute -bottom-full left-12 group-hover:bottom-10 transition-all duration-700 z-20">
                 <span className="text-3xl text-white">Project Title</span>
+                <a href="https://github.com/mohammadpiriyan/AriMovie">
+                  <FaGithub />
+                </a>
               </div>
             </div>
           </motion.div>
