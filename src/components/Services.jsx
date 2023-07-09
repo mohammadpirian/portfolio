@@ -3,6 +3,10 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import NextModal from "./modals/NextModal";
+import ReactModal from "./modals/ReactModal";
+import JsModal from "./modals/JsModal";
+import TsModal from "./modals/TsModal";
+import OtherModal from "./modals/OtherModal";
 
 const services = [
   {
@@ -14,7 +18,7 @@ const services = [
   {
     name: "React-JS",
     description:
-      "JSX, TSX, Functional Component, Server Components, Hooks, Context API, Form Validations, Container Presentational.",
+      "JSX, TSX, Functional Component, Server Components, Hooks, Context API, Form Validations, Container Presentational, ...",
     modaldescription:
       "JSX, TSX, Functional Component, Server Components, Hooks, Context API, Form Validations, Container Presentational, Component Architecture, Prop Types, Material-UI, Styled Component, CSS Modules, React DataTable, Redux, React Router, React Query ,React Dev Tools.",
     link: "learn more",
@@ -30,7 +34,7 @@ const services = [
   {
     name: "JavaScript",
     description:
-      "ES6, Async Programming, OOP in JS, FP in JS, Pure JS SPA, DOM Manipulation, Functions, Events, Forms, Promises.",
+      "ES6, Async Programming, OOP in JS, FP in JS, Pure JS SPA, DOM Manipulation, Functions, Events, Forms, Promises, ...",
     modaldescription:
       "ES6, Async Programming, OOP in JS, FP in JS, Pure JS SPA, DOM Manipulation, Functions, Events, Forms, Promises, async/await, jQuery, Error Handling, Date & Time.",
     link: "learn more",
@@ -55,6 +59,7 @@ const Services = () => {
   const [reactModal, setReactModal] = useState(false);
   const [tsModal, setTsModal] = useState(false);
   const [jsModal, setJsModal] = useState(false);
+  const [otherModal, setOtherModal] = useState(false);
   return (
     <section className="section" id="services">
       <div className="container mx-auto">
@@ -71,7 +76,9 @@ const Services = () => {
               Showcasing my programming skills: languages, technologies, and
               tools.
             </h3>
-            <button className="btn btn-sm">See my work</button>
+            <button className="btn btn-sm" onClick={() => setOtherModal(true)}>
+              See More Skills...
+            </button>
           </motion.div>
           <motion.div
             variants={fadeIn("left", 0.3)}
@@ -99,17 +106,20 @@ const Services = () => {
                   <div className="flex flex-col flex-1 items-end">
                     <a
                       className="btn w-9 h-9 mb-[42px] flex justify-center items-center"
-                      href="#"
                       onClick={() => {
                         switch (modal) {
                           case "next":
                             setNextModal(true);
+                            break;
                           case "react":
                             setReactModal(true);
+                            break;
                           case "ts":
                             setTsModal(true);
+                            break;
                           case "js":
                             setJsModal(true);
+                            break;
                         }
                       }}
                     >
@@ -127,6 +137,14 @@ const Services = () => {
       </div>
       {nextModal && (
         <NextModal setNextModal={setNextModal} nextModal={nextModal} />
+      )}
+      {reactModal && (
+        <ReactModal setReactModal={setReactModal} reactModal={reactModal} />
+      )}
+      {jsModal && <JsModal setJsModal={setJsModal} jsModal={jsModal} />}
+      {tsModal && <TsModal setTsModal={setTsModal} tsModal={tsModal} />}
+      {otherModal && (
+        <OtherModal setOtherModal={setOtherModal} otherModal={otherModal} />
       )}
     </section>
   );
