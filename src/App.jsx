@@ -7,19 +7,27 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import { Helmet } from "react-helmet";
+import logo from "./assets/logo.png";
 
 const App = () => {
   return (
-    <div className="bg-site bg-no-repeat bg-cover overflow-hidden ">
-      <Header />
-      <Banner />
-      <Nav />
-      <About />
-      <Services />
-      <Work />
-      <Contact />
-      {/* <div className='h-[4000px]'></div> */}
-    </div>
+    <>
+      <Helmet>
+        <title>MohammadPiriyan</title>
+        <link rel="icon" type="image/png" href={logo} />
+      </Helmet>
+      <div className="bg-site bg-no-repeat bg-cover overflow-hidden ">
+        <Header />
+        <Banner />
+        <Nav />
+        <About />
+        <Services />
+        <Work />
+        <Contact />
+        {/* <div className='h-[4000px]'></div> */}
+      </div>
+    </>
   );
 };
 
